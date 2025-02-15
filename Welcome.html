@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #2b063c, #9c52b7);
+            height: 100vh;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Prevent scrollbars */
+        }
+
+        .container {
+            display: flex;
+            height: 80%; /* Allow space for padding */
+            width: 70%; /* Adjust width for better proportions */
+            border-radius: 20px; /* More rounded corners */
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            transform: translateY(-30px); /* Slight upward tilt effect */
+        }
+
+        
+        .left {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f7f7f7;
+        }
+
+        .welcome-image {
+            width: 85%;  /* Adjust the size of the image */
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);  /* Soft shadow for depth */
+        }
+
+        
+        .right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 30px; /* Improved padding for a cleaner layout */
+        }
+
+        /* Logo styling */
+        .logo {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        h2 {
+            font-size: 2.8rem; /* Slightly larger heading */
+            margin-bottom: 20px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        h3 {
+            color: grey;
+            font-weight: 400;
+        }
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* Increased gap for better spacing */
+        }
+
+        .btn {
+            padding: 15px 30px; /* Slightly larger button */
+            font-size: 1.2rem; /* Slightly bigger font size */
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            background: linear-gradient(135deg, #007BFF, #0056b3); /* Gradient button */
+            color: white;
+            transition: all 0.3s ease;
+            width: 100%;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            background: linear-gradient(135deg, #0056b3, #007BFF);
+        }
+
+        .btn:active {
+            transform: translateY(0);  /* Reset lift effect on click */
+        }
+
+        .btn:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px #0056b3;
+        }
+
+       
+        .social-icons {
+            display: flex;
+            gap: 25px; /* Increased gap between icons */
+            margin-top: 30px;  /* Increased space between buttons and icons */
+        }
+
+        .social-icons a {
+            color: #333;
+            font-size: 3rem; 
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #007BFF; 
+        }
+
+        .container {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        /* Fade-in effect */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                width: 85%;
+            }
+            .left, .right {
+                flex: 1;
+                padding: 20px;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+            .btn {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <img src="https://img.freepik.com/premium-photo/painting-dog-cat-sitting-together-generative-ai_902639-102332.jpg" alt="Welcome Image" class="welcome-image">
+        </div>
+        <div class="right">
+            <img src="logo.jpg" alt="Logo" class="logo">
+            <h2>Welcome to FluffyTails!!</h2>
+            <h3>Log in or Sign up to save your favourite pets.</h3>
+            <br><br>
+            <div class="buttons">
+                <a href="SignUp.html">
+                    <button class="btn" id="create-account">Create Account</button>
+                </a>
+
+                <a href="LogIn.html">
+                    <button class="btn" id="login">Login</button>
+                </a>
+            </div>
+            <br><br>
+            <div class="social-icons">
+                <a href="https://www.instagram.com" target="_blank" class="fab fa-instagram"></a>
+                <a href="https://www.facebook.com" target="_blank" class="fab fa-facebook"></a>
+                <a href="https://twitter.com" target="_blank" class="fab fa-twitter"></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
