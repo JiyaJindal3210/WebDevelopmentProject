@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Adoption</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #dfdaea;
+            display: flex;
+        }
+        .sidebar {
+            width: 250px;
+            background: #5a2d82;
+            color: white;
+            padding: 20px;
+            height: 100vh;
+        }
+        .sidebar h2 {
+            margin-bottom: 20px;
+        }
+        .container {
+            width: calc(100% - 250px);
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            color: #5a2d82;
+            font-style: italic;
+        }
+        .pet-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .pet-card {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+        .pet-card:hover {
+            transform: translateY(-5px);
+        }
+        .pet-card img {
+            width: 100%;
+            border-radius: 10px;
+            height: 200px;
+            object-fit: cover;
+        }
+        .pet-info {
+            margin-top: 10px;
+        }
+        .pet-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #5a2d82;
+        }
+        .pet-details {
+            font-size: 14px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Filter Options</h2>
+        <p>Breed: Any</p>
+        <p>Age: Any</p>
+        <p>Size: Any</p>
+        <p>Gender: Any</p>
+    </div>
+    <div class="container">
+        <br>
+        <div class="pet-grid">
+            <div class="pet-card">
+                <img src="https://th.bing.com/th?id=OSK.HEROy9VR7KPTnKBcoHbUl7P3gEqvU6I0YV8YFu6wz7A5FX4&w=312&h=200&c=15&rs=2&o=6&oif=webp&dpr=1.3&pid=SANGAM">
+                <div class="pet-info">
+                    <p class="pet-name">Whiskers</p>
+                    <p class="pet-details">Adult • Siamese • 1 mile away</p>
+                </div>
+            </div>
+            <div class="pet-card">
+                <img src="https://th.bing.com/th/id/OIP.rRWT4tE7on19tSOUg8LsswHaHa?w=213&h=213&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Cat">
+                <div class="pet-info">
+                    <p class="pet-name">Mittens</p>
+                    <p class="pet-details">Kitten • Maine Coon • 2 miles away</p>
+                </div>
+            </div>
+            <div class="pet-card">
+                <img src="https://th.bing.com/th/id/OIP.t38bX_RGi215THgQf3tGqgHaK_?w=115&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7">
+                <div class="pet-info">
+                    <p class="pet-name">Shadow</p>
+                    <p class="pet-details">Young • Bombay • 3 miles away</p>
+                </div>
+            </div>
+            <div class="pet-card">
+                <img src="https://th.bing.com/th/id/OIP.O0V6YCo2dW7BnESnVXP6pwHaF7?w=228&h=182&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Cat">
+                <div class="pet-info">
+                    <p class="pet-name">Luna</p>
+                    <p class="pet-details">Adult • Persian • 1.5 miles away</p>
+                </div>
+            </div>
+            <div class="pet-card">
+                <img src="https://th.bing.com/th/id/OIP.tw8IfOZpvk5v0-075KquHQHaE8?w=271&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7">
+                <div class="pet-info">
+                    <p class="pet-name">Cleo</p>
+                    <p class="pet-details">Kitten • Ragdoll • 2.5 miles away</p>
+                </div>
+            </div>
+            <div class="pet-card">
+                <img src="https://th.bing.com/th/id/OIP.oCnvzTNt7bAiflwPzySiigHaE7?w=234&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7">
+                <div class="pet-info">
+                    <p class="pet-name">Simba</p>
+                    <p class="pet-details">Kitten • Bengal • 3 miles away</p>
+                </div>
+            </div>
+            <div class="pet-card">
+                <img src="https://th.bing.com/th/id/OIP.EKJoA_dKQMr4dCWDpDRUlAHaFV?w=241&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Cat">
+                <div class="pet-info">
+                    <p class="pet-name">Oliver</p>
+                    <p class="pet-details">Kitten • British Shorthair • 1.8 miles away</p>
+                </div>
+            </div>
+            <div class="pet-card">
+                <img src="https://th.bing.com/th/id/OIP.l0WnU8nPTvZeIuGAAJ0aYwHaE7?w=256&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7">
+                <div class="pet-info">
+                    <p class="pet-name">Bella</p>
+                    <p class="pet-details">Kitten • Scottish Fold • 2.2 miles away</p>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="image-container">
+            <img src="https://th.bing.com/th/id/OIP.fJpVPZMQbULXActM_i32TQHaJQ?w=167&h=209&c=7&r=0&o=5&dpr=1.3&pid=1.7" width="500px" height="200px">
+            
+            <img src="ADS.jpg" width="500px" height="200px">
+            </div>
+            <br><br><br>
+            <h1>PETS AVAILABLE NEARBY </h1>
+            <br>
+            <div class="pet-grid">
+                <div class="pet-card">
+                    <img src="https://th.bing.com/th/id/OIP.RgKe4nvazc3ODf4QndXfOAHaHJ?w=174&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7">
+                    <div class="pet-info">
+                        <p class="pet-name">Snowball</p>
+                        <p class="pet-details">Adult • RUSSIAN BLUE • 4 miles away</p>
+                    </div>
+                </div>
+                <div class="pet-card">
+                    <img src="https://th.bing.com/th/id/OIP.8jU2LFndA3ZnEdlRmrlzxgHaFj?w=259&h=194&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Pet">
+                    <div class="pet-info">
+                        <p class="pet-name">Ginger</p>
+                        <p class="pet-details">Young • BIRMAN • 2 miles away</p>
+                    </div>
+                </div>
+                <div class="pet-card">
+                    <img src="https://th.bing.com/th/id/OIP._xvkRx2RXN2XBBvtSW1f-QHaE5?rs=1&pid=ImgDetMain">
+                    <div class="pet-info">
+                        <p class="pet-name">Chloe</p>
+                        <p class="pet-details">Young • MANX • 3 miles away</p>
+                    </div>
+                </div>
+                <div class="pet-card">
+                    <img src="https://th.bing.com/th/id/OIP.zWWwLjlOXOAV1LoF8bBylAHaFJ?w=267&h=186&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Pet">
+                    <div class="pet-info">
+                        <p class="pet-name">Daisy</p>
+                        <p class="pet-details">Adult • TURKISH VAN • 5 miles away</p>
+                    </div>
+                </div>
+            </div>
+            <br><br><br>
+
+            <h1>PETS AVAILABLE FOR ADOPTION</h1>
+            <br>
+            <div class="pet-grid">
+                
+                
+                <div class="pet-card">
+                    <img src="https://th.bing.com/th/id/OIP.9o29LuZC3IBTsoI4fR94ggHaGK?w=236&h=195&c=7&r=0&o=5&dpr=1.3&pid=1.7">
+                    <div class="pet-info">
+                        <p class="pet-name">MITTENS</p>
+                        <p class="pet-details">Adult • Himalayan • 4 miles away</p>
+                    </div>
+                </div>
+                <div class="pet-card">
+                    <img src="https://th.bing.com/th/id/OIP.-RapkWUuqV3PCKc_U95WFAHaEw?w=236&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Pet">
+                    <div class="pet-info">
+                        <p class="pet-name">PICKLES</p>
+                        <p class="pet-details">Young • BURMESE • 2 miles away</p>
+                    </div>
+                </div>
+                <div class="pet-card">
+                    <img src="https://th.bing.com/th/id/OIP.XGmDAA1rvZqc8iBJ_5yUigAAAA?w=132&h=198&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Pet">
+                    <div class="pet-info">
+                        <p class="pet-name">PEPPER</p>
+                        <p class="pet-details">Young • SAVANNAH • 3 miles away</p>
+                    </div>
+                </div>
+                <div class="pet-card">
+                    <img src="https://th.bing.com/th/id/OIP.7S_YddqLWTKSMSS7WHWpaAHaE7?w=288&h=192&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Pet">
+                    <div class="pet-info">
+                        <p class="pet-name">LUNA</p>
+                        <p class="pet-details">Adult •BIRMAN• 5 miles away</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="pet-grid">    
+                <div class="pet-card">
+                    <img src="https://th.bing.com/th/id/OIP._U5gje4KtdzNdPcRbOAO6AHaE5?w=265&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7">
+                    <div class="pet-info">
+                        <p class="pet-name">MAX</p>
+                        <p class="pet-details">Adult • INDIAN CAT • 4 miles away</p>
+                    </div>
+                </div>
+                <div class="pet-card">
+                    <img src="https://th.bing.com/th/id/OIP.g_fidhhp_93uqmOBtGqbRgHaE8?w=276&h=184&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Pet">
+                    <div class="pet-info">
+                        <p class="pet-name">BELLA</p>
+                        <p class="pet-details">Young • Tonkinese • 2 miles away</p>
+                    </div>
+                </div>
+                <div class="pet-card">
+                    <img src="https://th.bing.com/th/id/OIP.Rkee4ULW7aglheWaJ9rdEAHaE7?rs=1&pid=ImgDetMain" alt="Pet">
+                    <div class="pet-info">
+                        <p class="pet-name">LILY</p>
+                        <p class="pet-details">Young • Singapura • 3 miles away</p>
+                    </div>
+                </div>
+                <div class="pet-card">
+                    <img src="https://th.bing.com/th/id/OIP.vYpULHFrSCVs5Jo-223QTwHaFW?w=231&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7">
+                    <div class="pet-info">
+                        <p class="pet-name">LUNA</p>
+                        <p class="pet-details">Adult •Balinese • 5 miles away</p>
+                    </div>
+                </div>
+            </div>   
+
+    </div>
+</body>
+</html>
