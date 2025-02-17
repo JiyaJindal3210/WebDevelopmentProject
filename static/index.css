@@ -280,6 +280,10 @@ body {
     padding: 25px;
 }
 
+.container a {
+    text-decoration: none;
+}
+
 .container .card {
     width: 160px;
     height: 135px;
