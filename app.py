@@ -47,6 +47,16 @@ def dogPuppiesAdoption():
 def dogs():
     return render_template("dogs.html")
 
+@app.route("/behaviordog")
+def behaviordog():
+    return render_template("behavior_dog.html")
+
+
+@app.route("/behaviorcat")
+def behaviorcat():
+    return render_template("behavior_cat.html")
+
+
 @app.route("/learnmore2.html")
 def learnmore2():
     return render_template("learnmore2.html")

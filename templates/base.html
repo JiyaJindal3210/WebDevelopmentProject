@@ -352,26 +352,39 @@
                             <a href="{{url_for('aboutus2')}}">ABOUT FLUFFY TAILS</a>
                         </div>
                         <div class="sub-option">
-                            <a href="{{url_for('adoptingpets')}}">ADOPTING PETS</a></div>
+                            <a href="{{url_for('adoptingpets')}}">ADOPTING PETS</a>
+                        </div>
                         <div class="sub-option">
-                            <a href="{{url_for('foundation')}}">FLUFFY TAILS FOUNDATION</a></div>
+                            <a href="{{url_for('foundation')}}">FLUFFY TAILS FOUNDATION</a>
+                        </div>
                     </div>
 
                 </div>
                 <div class="option">DOGS & PUPPIES
                     <div class="sub-dropdown">
-                        <div class="sub-option">DOG ADOPTION</div>
-                        <div class="sub-option">DOG BREEDS</div>
-                        <div class="sub-option">FEEDING YOUR DOG</div>
+                        <div class="sub-option">
+                            <a href="{{url_for('dogPuppiesAdoption')}}">DOG ADOPTION</a>
+                        </div>
+                        <div class="sub-option">
+                            <a href="{{url_for('dogs')}}">DOG BREEDS</a>
+                        </div>
+                        <div class="sub-option">
+                            <a href="{{url_for('behaviordog')}}">DOG BEHAVIOR</a>
+                        </div>
                         <div class="sub-option">OTHER DOG INFORMATION</div>
                     </div>
 
                 </div>
                 <div class="option">CATS & KITTENS
                     <div class="sub-dropdown">
-                        <div class="sub-option">CAT ADOPTION</div>
-                        <div class="sub-option">CAT BREEDS</div>
-                        <div class="sub-option">FEEDING YOUR CAT</div>
+                        <div class="sub-option">
+                            <a href="{{url_for('catKittenAdoption')}}">CAT ADOPTION</a>
+                        </div>
+                        <div class="sub-option">
+                            <a href="{{url_for('cats')}}">CAT BREEDS</a>
+                        </div>
+                        <div class="sub-option">
+                            <a href="{{url_for('behaviorcat')}}">CAT BEHAVIOR</a></div>
                         <div class="sub-option">OTHER CAT INFORMATION</div>
                     </div>
 
@@ -389,7 +402,7 @@
 
 
         <div class="ContactUs">
-            <a href="/contact">
+            <a href="{{url_for('contact')}}">
                 <p>Contact Us</p>
             </a>
         </div>
@@ -426,19 +439,19 @@
         <div class="footer-content">
             <div class="footer-column">
                 <h3>RESOURCES</h3>
-                <a href="#">FAQs</a>
+                <a href="{{url_for('contact')}}">FAQs</a>
                 <a href="#">Mobile App Download</a>
                 <a href="#">Partnerships</a>
-                <a href="#">News Center</a>
+                <a href="{{url_for('foundation')}}">News Center</a>
                 <a href="#">Put Petfinder On Your Site</a>
                 <a href="#">For Developers</a>
-                <a href="#">Contact Us</a>
+                <a href="{{url_for('contact')}}">Contact Us</a>
             </div>
 
             <div class="footer-column">
                 <h3>ADOPT OR GET INVOLVED</h3>
                 <a href="#">All Adopt or Get Involved</a>
-                <a href="#">Adopting Pets</a>
+                <a href="{{url_for('adoptingpets')}}">Adopting Pets</a>
                 <a href="#">Animal Shelters & Rescues</a>
                 <a href="#">Other Types of Pets</a>
             </div>
@@ -446,10 +459,10 @@
             <div class="footer-column">
                 <h3>ABOUT DOGS & PUPPIES</h3>
                 <a href="#">All About Dogs & Puppies</a>
-                <a href="#">Dog Adoption</a>
-                <a href="#">Dog Breeds</a>
+                <a href="{{url_for('dogPuppiesAdoption')}}">Dog Adoption</a>
+                <a href="{{url_for('dogs')}}">Dog Breeds</a>
                 <a href="#">Feeding Your Dog</a>
-                <a href="#">Dog Behavior</a>
+                <a href="{{url_for('behaviordog')}}">Dog Behavior</a>
                 <a href="#">Dog Health & Wellness</a>
                 <a href="#">Dog Training</a>
                 <a href="#">Other Dog Information</a>
@@ -458,10 +471,10 @@
             <div class="footer-column">
                 <h3>ABOUT CATS & KITTENS</h3>
                 <a href="#">All About Cats & Kittens</a>
-                <a href="#">Cat Adoption</a>
-                <a href="#">Cat Breeds</a>
+                <a href="{{url_for('catKittenAdoption')}}">Cat Adoption</a>
+                <a href="{{url_for('cats')}}">Cat Breeds</a>
                 <a href="#">Feeding Your Cat</a>
-                <a href="#">Cat Behavior</a>
+                <a href="{{url_for('behaviorcat')}}">Cat Behavior</a>
                 <a href="#">Cat Health & Wellness</a>
                 <a href="#">Cat Training</a>
                 <a href="#">Other Cat Information</a>
