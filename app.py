@@ -1,5 +1,6 @@
 from flask import Flask,render_template
-app=Flask{__name__}
+
+app=Flask(__name__)
 
 @app.route("/")
 def home():
@@ -37,14 +38,14 @@ def cats():
 def dogPuppiesAdoption():
     return render_template("dogPuppiesAdoption.html")
 
-@app.route("dogs")
+@app.route("/dogs")
 def dogs():
     return render_template("dogs.html")
 
-@app.route("learnmore2.html")
+@app.route("/learnmore2.html")
 def learnmore2():
     return render_template("learnmore2.html")
 
-@app.route("learnmore3.html")
+@app.route("/learnmore3.html")
 def learnmore3():
     return render_template("learnmore3.html")
