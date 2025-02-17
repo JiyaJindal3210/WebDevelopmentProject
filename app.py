@@ -1,4 +1,4 @@
-from flask import Flask,render_template
+from flask import Flask,render_template,url_for
 
 app=Flask(__name__)
 
@@ -6,9 +6,18 @@ app=Flask(__name__)
 def home():
     return  render_template("index.html")
 
-@app.route("/contact")
+@app.route('/contact')
 def contact():
     return render_template("contactus.html")
+
+@app.route("/login")
+def login():
+    return render_template("LogIn.html")
+
+@app.route("/signup")
+def signup():
+    return render_template("SignUp.html")
+
 
 @app.route("/aboutus")
 def aboutus():
@@ -30,10 +39,6 @@ def cats():
 def catKittenAdoption():
     return render_template("catKittenAdoption.html")
 
-@app.route("/cats")
-def cats():
-    return render_template("cats.html")
-
 @app.route("/dogPuppiesAdoption")
 def dogPuppiesAdoption():
     return render_template("dogPuppiesAdoption.html")
@@ -49,3 +54,11 @@ def learnmore2():
 @app.route("/learnmore3.html")
 def learnmore3():
     return render_template("learnmore3.html")
+
+@app.route("/foundation")
+def foundation():
+    return render_template("Foundation.html")
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
