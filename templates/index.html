@@ -1,0 +1,241 @@
+{% extends "base.html" %}
+
+
+{% block title %} Main page {% endblock %}
+
+{% block head %} 
+    <link rel="stylesheet" href="{{ url_for('static',filename='index.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="m1">
+    <img src="https://imgs.search.brave.com/gebvhmN9vLJAuweY31-_u4uAyhBquTnDJTiZtmyVVzI/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAwLzg5LzM0LzI1/LzM2MF9GXzg5MzQy/NTg5XzJEY2hxSlQ3/Y1ZpaGw4NDd0Nlg4/TnlvcU5yNXQwUGd0/LmpwZw"
+        alt="">
+    <div class="text-overlay">
+        <span class="line1">Find your new best friend</span>
+        <br>
+        <span class="line2">Browse pets from our network of over 14,500 shelters and rescues.</span>
+    </div>
+</div>
+
+
+<div class="container">
+    <a href="{{url_for('dogs')}}">
+        <div class="card">
+            <i class="fa-solid fa-dog fa-2xl"></i><br><br>
+            <p><b>Dogs</b></p>
+        </div>
+    </a>
+    <a href="{{url_for('cats')}}">
+    <div class="card">
+        <i class="fa-solid fa-cat fa-2xl"></i><br><br>
+        <p><b>Cats</b></p>
+    </div>
+    </a>
+    <a href="">
+        <div class="card">
+            <i class="fa-solid fa-paw fa-2xl"></i><br><br>
+            <p><b>Other Animals</b></p>
+        </div>
+    </a>
+    <a href="">
+        <div class="card">
+            <i class="fa-solid fa-shield-dog fa-2xl"></i><br><br>
+            <p><b>Shelters & Rescues</b></p>
+        </div>
+    </a>
+</div>
+
+<div class="m2">
+    <img src="https://th.bing.com/th/id/OIP.RrcQD_UnhQc4XSY6fw6X8wHaDU?w=208&h=93&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="">
+</div>
+
+<br><br>
+
+<div class="m3">
+    <p> <b>Pets Availabe for Adoption Nearby</b> <i class="fa-solid fa-caret-right fa-2xl"></i></p>
+</div>
+
+
+
+<div class="container1">
+    <div class="card">
+        <img src="https://www.dailypaws.com/thmb/ZrlO_VB3tHPPOsixF4TZavPL6nU=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/bernese-mountain-dog-sitting-puppy-204356895-2000-a0b4b9470f5c44b5b50967c465d89153.jpg"
+            alt="bernese">
+        <div class="heart-icon">
+            <i class="fa-regular fa-heart fa-2xl"></i>
+        </div>
+        <p><b>Breeze</b></p>
+    </div>
+
+    <div class="card">
+        <img src="https://www.dailypaws.com/thmb/U5LSNUvuPg11dYfu-ME_qrhYrvI=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/golden-retriever-pup-with-girl-115099506-2000-cfba39d781a343c39be586800192d1fc.jpeg"
+            alt="retreiver">
+        <div class="heart-icon">
+            <i class="fa-regular fa-heart fa-2xl"></i>
+        </div>
+        <p><b>Apollo</b></p>
+    </div>
+
+    <div class="card">
+        <img src="https://www.dailypaws.com/thmb/8G5_27kiaSTCF47Xvc3h6xB0Ahc=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/pomeranian-white-puppy-921029690-2000-3ca2fdb56d144450a05c6990efdfd40e.jpg"
+            alt="pomeranian">
+        <div class="heart-icon">
+            <i class="fa-regular fa-heart fa-2xl"></i>
+        </div>
+        <p>Tuffy</p>
+    </div>
+
+    <div class="card">
+        <img src="https://www.dailypaws.com/thmb/xTRmAaUpdBNpydMcYggBjEoDKb0=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/italian-greyhound-puppy-running-1190141684-2000-554e3e0bcdc24e64b3207a154f34afdf.jpg"
+            alt="Greyhound">
+        <div class="heart-icon">
+            <i class="fa-regular fa-heart fa-2xl"></i>
+        </div>
+        <p>Air Con</p>
+    </div>
+
+    <div class="more-pets">
+        <i class="fa-solid fa-paw fa-2xl"></i><br>
+        <p>5 more pets available on Petfinder</p>
+        <div class="meet-btn">MEET THEM</div>
+    </div>
+</div>
+
+<br><br>
+
+<div class="container2">
+    <br>
+    <p><b> PLANNING TO ADOPT A PET ? </b></p>
+    <div class="grid-container">
+        <div class="grid-item">
+            <i class="fa-solid fa-shield-dog fa-2xl"></i><br><br><br>
+            <h4>CHECKLIST FOR NEW ADOPTERS</h4>
+            <p>Make the adoption transition as smooth as possible.</p>
+            <button class="outline-btn">LEARN MORE</button>
+        </div>
+
+        <div class="grid-item">
+            <i class="fa-solid fa-dog fa-2xl"></i><br><br><br>
+            <h4>HOW OLD IS A DOG IN HUMAN YEARS?</h4>
+            <p>Learn to translate dog years to human years for fun and vice versa.</p>
+            <button class="outline-btn">LEARN MORE</button>
+        </div>
+
+        <div class="grid-item">
+            <i class="fa-solid fa-clipboard-question fa-2xl"></i><br><br><br>
+            <h4>PET ADOPTION FAQS</h4><br>
+            <p>Get answers to all the questions you haven’t thought of for your adoption.</p>
+            <button class="outline-btn">LEARN MORE</button>
+        </div>
+    </div>
+    <br>
+
+</div>
+<br><br>
+
+<div class="i1">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVPcyqL8Vc74dbI5gtgT3UBNLfqvdErTYthA&s" alt="">
+    <img src="./static/image2.webp" alt="Fluffy Tails">
+</div>
+
+<br><br><br>
+
+<div class="m6">
+    <p> <b>Pets Availabe for Adoption Nearby</b> <i class="fa-solid fa-caret-right fa-2xl"></i></p>
+</div>
+
+
+<div class="container5">
+
+    <div class="card">
+        <img src="https://cats.com/wp-content/uploads/2020/10/Asian-semi-longhair-cat-compressed-1-540x360.jpg"
+            alt="Asian-semi-longhair">
+        <div class="heart-icon">
+            <i class="fa-regular fa-heart fa-2xl"></i>
+        </div>
+        <p>Emerald</p>
+    </div>
+
+    <div class="card">
+        <img src="https://cats.com/wp-content/uploads/2020/10/Toyger-cat-compressed-1-540x360.jpg" alt="Toyger">
+        <div class="heart-icon">
+            <i class="fa-regular fa-heart fa-2xl"></i>
+        </div>
+        <p><b>Nova</b></p>
+    </div>
+
+    <div class="card">
+        <img src="https://cats.com/wp-content/uploads/2020/10/Cymric-1-346x360.jpg" alt="Cymric">
+        <div class="heart-icon">
+            <i class="fa-regular fa-heart fa-2xl"></i>
+        </div>
+        <p><b>Oscar</b></p>
+    </div>
+
+    <div class="card">
+        <img src="https://cats.com/wp-content/uploads/2022/04/Siberian-Cat-compressed-540x360.jpg" alt="Siberian">
+        <div class="heart-icon">
+            <i class="fa-regular fa-heart fa-2xl"></i>
+        </div>
+        <p>Skye</p>
+    </div>
+
+    <div class="more-pets">
+        <i class="fa-solid fa-paw fa-2xl"></i><br>
+        <p>5 more pets available on Petfinder</p>
+        <div class="meet-btn">MEET THEM</div>
+    </div>
+</div>
+
+<br><br>
+
+<div class="container3">
+    <div class="card">
+        <img src="https://imgs.search.brave.com/GBQ8z0kLZCIMXoxhrPxzXh5oHnlzuVtlLNolDR6xFBU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvZmVhdHVy/ZWQvYmVhdXRpZnVs/LWRvZy1waWN0dXJl/cy00dmE2aHR3czVj/OXVvcGQyLmpwZw"
+            alt="Dog">
+        <div class="card-content">
+            <img class="profile-img"
+                src="https://imgs.search.brave.com/GBQ8z0kLZCIMXoxhrPxzXh5oHnlzuVtlLNolDR6xFBU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvZmVhdHVy/ZWQvYmVhdXRpZnVs/LWRvZy1waWN0dXJl/cy00dmE2aHR3czVj/OXVvcGQyLmpwZw"
+                alt="Dog">
+            <br>
+            <h2>Dog Adoption Articles</h2>
+            <p>Learn more about caring for your new dog</p>
+            <hr>
+            <div class="r1">
+                <a href="#">READ MORE</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://imgs.search.brave.com/dQ--3X5ZFJ86L4Wt5DB5-Zjyt-VDi6UGKMukNN5yy0A/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNTA4/MDMwMzQwL3Bob3Rv/L3N1bm55LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/cWt6LU1mMzJzYkpu/ZWZSeHBCN0Z3cGN4/YnAxZm96WXRKeGJR/b0t2U2VHTT0"
+            alt="Cat">
+        <div class="card-content">
+            <img class="profile-img"
+                src="https://imgs.search.brave.com/dQ--3X5ZFJ86L4Wt5DB5-Zjyt-VDi6UGKMukNN5yy0A/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvNTA4/MDMwMzQwL3Bob3Rv/L3N1bm55LWNhdC5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/cWt6LU1mMzJzYkpu/ZWZSeHBCN0Z3cGN4/YnAxZm96WXRKeGJR/b0t2U2VHTT0"
+                alt="Cat">
+            <br>
+            <h2>Cat Adoption Articles</h2>
+            <p>Helpful insights on what to expect.</p>
+            <hr>
+            <div class="r2">
+                <a href="#">READ MORE</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<br><br>
+
+<div class="i3">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6XMj062UZ4gzoEZbfhysOJMuwgPimyhmUJ14p2-AExVfGqHDvgpeMAOrf8oZgoJp3940&usqp=CAU"
+        alt="">
+</div>
+
+
+
+{% endblock %}
