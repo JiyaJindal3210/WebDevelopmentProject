@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome Page</title>
-    
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <style>
+{% extends "base.html" %}
+
+{% block title %} Welcome Page {% endblock %}
+
+{% block head %}   
+ <style>
         
         * {
             margin: 0;
@@ -164,8 +161,9 @@
             }
         }
     </style>
-</head>
-<body>
+{% endblock %}
+
+{% block content %}
     <div class="container">
         <div class="left">
             <img src="https://img.freepik.com/premium-photo/painting-dog-cat-sitting-together-generative-ai_902639-102332.jpg" alt="Welcome Image" class="welcome-image">
@@ -192,5 +190,4 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+{% endblock %}
