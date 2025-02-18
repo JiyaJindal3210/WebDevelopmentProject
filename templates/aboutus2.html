@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Pet Adoption</title>
+{% block title %} About FluffyTails {% endblock %}
+
+{% block head %}
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,8 +13,8 @@
         }
 
         .container {
+            margin-top: 180px;
             width: 80%;
-            margin: auto;
             padding: 50px 0;
         }
 
@@ -96,9 +94,9 @@
 
         }
     </style>
-</head>
+{% endblock %}
 
-<body>
+{% block content %}
     <div class="container">
         <h1>About Fluffy Tails</h1>
         <div class="features">
@@ -145,6 +143,4 @@
         <img src="https://i.pinimg.com/236x/6b/6d/3a/6b6d3a29fd5d1b6d741a1014dd1259b3.jpg" width="600px" height="300px">
     </div>
 </div>
-</body>
-
-</html>
+{% endblock %}
