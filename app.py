@@ -69,6 +69,13 @@ def learnmore3():
 def foundation():
     return render_template("Foundation.html")
 
+@app.route("/checklist")
+def checklist():
+    return render_template("checklist.html")
+
+@app.route("/welcome")
+def welcome():
+    return render_template("welcome.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
