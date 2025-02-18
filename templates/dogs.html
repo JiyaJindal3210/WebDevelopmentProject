@@ -1,9 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pet Adoption</title>
+{% extends "base.html" %}
+
+{% block title %} Dogs {% endblock %}
+
+{% block head %}
     <style>
  * {
             margin: 0;
@@ -79,8 +78,14 @@
             padding: 0%;
         }
     </style>
-</head>
-<body>
+{% endblock %}
+
+
+
+
+
+
+{% block content %}
     <div class="sidebar">
         <h2>Filter Options</h2>
         <p>Breed: Any</p>
@@ -260,5 +265,4 @@
 </div>
     
     
-</body>
-</html>
+{% endblock %}
