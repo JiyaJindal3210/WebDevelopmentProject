@@ -3,7 +3,10 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+body{
+    background-color:#3e0950;
+    color: white;
+}
 
 .navbar6 {
     height: 100px;
@@ -643,7 +646,7 @@ body {
     bottom: 0px;
     font-family: Arial, sans-serif;
     margin-top: 100px;
-
+    
 }
 
 .top-bar {

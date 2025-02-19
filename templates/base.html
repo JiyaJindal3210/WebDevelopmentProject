@@ -26,7 +26,7 @@
         }
 
         .logo6 img {
-            margin-right: 0px;
+            margin-left: -50px;
             height: 80px;
             width: 80px;
             border-radius: 50%;
@@ -44,7 +44,7 @@
         .ContactUs,
         .AboutUs,
         .login,
-        .register {
+        .register,.Dashboard6, .logout6{
             border: none;
             outline: none;
             padding: 6px;
@@ -65,7 +65,7 @@
         .ContactUs a,
         .AboutUs a,
         .login a,
-        .register a {
+        .register a, .Dashboard6 a, .logout6 a{
             color: #911693;
             text-decoration: none;
         }
@@ -74,7 +74,7 @@
         .ContactUs:hover,
         .AboutUs:hover,
         .login:hover,
-        .register:hover {
+        .register:hover, .Dashboard6:hover, .logout6:hover {
             font-size: large;
         }
 
@@ -233,7 +233,7 @@
             justify-content: center;
             background-color: red;
             padding: 5px;
-            margin-top: 2000px;
+            margin-top: 150px;
         }
 
         .top-bar img {
@@ -303,11 +303,13 @@
             text-align: center;
             margin-top: 20px;
             font-size: 12px;
+            color: white;
 
         }
 
         .bottom-bar p {
             font-weight: bold;
+            color: #f3e6f7;
         }
 
         .social-icons {
@@ -413,22 +415,22 @@
         </div>
 
 
-        <li class="nav-item">
-            <a class="nav-link" href="{{url_for('contact')}}">Contact Us</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="{{url_for('aboutus')}}">About Us</a>
-        </li>
+        <div class="ContactUs">
+            <a href="{{url_for('contact')}}">Contact Us</a>
+        </div>
+        <div class="AboutUs">
+            <a href="{{url_for('aboutus')}}">About Us</a>
+        </div>
 
 
         {% if current_user.is_authenticated %}
 
-    <li class="nav-item">
-        <a class="nav-link" href="{{url_for('dashboard')}}">Dashboard</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="{{url_for('logout')}}">Logout</a>
-    </li>
+    <div class="Dashboard6">
+        <a href="{{url_for('dashboard')}}">Dashboard</a>
+    </div>
+    <div class="logout6">
+        <a href="{{url_for('logout')}}">Logout</a>
+    </div>
 
 
 
@@ -438,16 +440,16 @@
 
 
 
-    <li class="nav-item">
-        <a class="nav-link" href="{{url_for('signup')}}">Register</a>
-    </li>
+    <div class="register">
+        <a href="{{url_for('signup')}}">Register</a>
+    </div>
 
 
 
 
-    <li class="nav-item">
-        <a class="nav-link" href="{{url_for('login')}}">Login</a>
-    </li>
+    <div class="login">
+        <a href="{{url_for('login')}}">Login</a>
+    </div>
 
 
 
