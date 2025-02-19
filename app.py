@@ -1,5 +1,4 @@
-from flask import Flask,render_template,url_for
-
+from flask import Flask, render_template, redirect, request, url_for, flash
 app=Flask(__name__)
 
 @app.route("/")
@@ -17,7 +16,6 @@ def login():
 @app.route("/signup")
 def signup():
     return render_template("SignUp.html")
-
 
 @app.route("/aboutus")
 def aboutus():
@@ -76,6 +74,10 @@ def checklist():
 @app.route("/welcome")
 def welcome():
     return render_template("welcome.html")
+
+
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)
