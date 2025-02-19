@@ -248,6 +248,7 @@
             padding: 20px;
         }
 
+
         .footer-column {
             flex: 1;
             min-width: 200px;
@@ -258,6 +259,7 @@
             font-size: 16px;
             font-weight: bold;
             margin-bottom: 10px;
+            color: #E5C0D1;
         }
 
         .footer-column a {
@@ -314,6 +316,10 @@
 
         }
 
+        p{
+            color: white;
+        }
+
         .social-icons a {
             color: white;
             margin: 10px;
@@ -321,6 +327,10 @@
 
         .social-icons a:hover {
             font-size: larger;
+        }
+
+        .newsletter-box p{
+            color: #3E043B;
         }
     </style>
 
@@ -335,7 +345,7 @@
         </div>
         <div class="box6">
             <a href="#J1">
-                <a href="{{url_for('home')}}"></a><i class="fa-solid fa-house fa-2xl"></i>
+                <a href="{{url_for('home')}}"><i class="fa-solid fa-house fa-2xl"></i></a>
             </a>
 
         </div>
@@ -482,7 +492,7 @@
 
             <div class="newsletter-box">
                 <p>To get the latest on pet adoption and pet care, sign up for the Petfinder newsletter.</p>
-                <button class="signup-btn">SIGN UP</button>
+                <a href="{{url_for('signup')}}"><button class="signup-btn">SIGN UP</button></a>
             </div>
         </div>
 

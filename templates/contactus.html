@@ -8,7 +8,7 @@
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        background-color: lightpink;
+        background-color: rgb(38, 11, 52);
         text-align: left;
     }
 
@@ -65,7 +65,7 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-
+        margin-top: 250px;
         max-width: 90%;
     }
 
@@ -79,6 +79,12 @@
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
+
+    .modal-dialog{
+        margin-top: 200px;
+    }
+   
+
 </style>
 {% endblock %}
 
@@ -230,7 +236,7 @@
                         <h5 class="modal-title text-center" id="contactFormModalLabel">Contact Us</h5>
                     </div>
                     <div class="modal-body">
-                        <form id="contactForm">
+                        <form id="contactForm" method="POST">
                             <div class="mb-3">
                                 <label for="name" class="form-label">Your Name</label>
                                 <input type="text" class="form-control" id="name" placeholder="Enter your name"
@@ -250,6 +256,7 @@
                                 <button type="submit" class="btn btn-contact">Submit</button>
                             </div>
                         </form>
+                        
                     </div>
                 </div>
             </div>
