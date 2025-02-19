@@ -44,7 +44,7 @@
         .ContactUs,
         .AboutUs,
         .login,
-        .register,.logout {
+        .register {
             border: none;
             outline: none;
             padding: 6px;
@@ -65,7 +65,7 @@
         .ContactUs a,
         .AboutUs a,
         .login a,
-        .register a,.logout a {
+        .register a {
             color: #911693;
             text-decoration: none;
         }
@@ -74,7 +74,7 @@
         .ContactUs:hover,
         .AboutUs:hover,
         .login:hover,
-        .register:hover,.logout:hover {
+        .register:hover {
             font-size: large;
         }
 
@@ -199,7 +199,7 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.3);
         }
 
-        .sub-option a{
+        .sub-option a {
             text-decoration: none;
             color: pink;
         }
@@ -223,7 +223,7 @@
             padding: 20px;
             bottom: 0px;
             font-family: Arial, sans-serif;
-            margin-top: 100px;
+           
 
         }
 
@@ -233,6 +233,7 @@
             justify-content: center;
             background-color: red;
             padding: 5px;
+            margin-top: 150px;
         }
 
         .top-bar img {
@@ -316,7 +317,7 @@
 
         }
 
-        p{
+        p {
             color: white;
         }
 
@@ -329,17 +330,17 @@
             font-size: larger;
         }
 
-        .newsletter-box p{
+        .newsletter-box p {
             color: #3E043B;
         }
     </style>
 
-    {% block head %}   {% endblock %}
+    {% block head %} {% endblock %}
 
 </head>
 
 <body>
-    <nav class="navbar6">
+    <header class="navbar6">
         <div class="logo6">
             <img src="./static/image.png" alt="Feelzy-Music">
         </div>
@@ -394,7 +395,8 @@
                             <a href="{{url_for('cats')}}">CAT BREEDS</a>
                         </div>
                         <div class="sub-option">
-                            <a href="{{url_for('behaviorcat')}}">CAT BEHAVIOR</a></div>
+                            <a href="{{url_for('behaviorcat')}}">CAT BEHAVIOR</a>
+                        </div>
                         <div class="sub-option">OTHER CAT INFORMATION</div>
                     </div>
 
@@ -411,7 +413,48 @@
         </div>
 
 
-        <div class="ContactUs">
+        <li class="nav-item">
+            <a class="nav-link" href="{{url_for('contact')}}">Contact Us</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{url_for('aboutus')}}">About Us</a>
+        </li>
+
+
+        {% if current_user.is_authenticated %}
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{url_for('dashboard')}}">Dashboard</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{url_for('logout')}}">Logout</a>
+    </li>
+
+
+
+
+    {% else %}
+
+
+
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{url_for('signup')}}">Register</a>
+    </li>
+
+
+
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{url_for('login')}}">Login</a>
+    </li>
+
+
+
+
+    {% endif %}
+
+        <!-- <div class="ContactUs">
             <a href="{{url_for('contact')}}">
                 <p>Contact Us</p>
             </a>
@@ -423,17 +466,6 @@
         </div>
 
 
-        {% if current_user.is_authenticated %}
-
-        <a href="#J2">
-            <a href="{{url_for('home')}}"><p>Home</p></a>
-        </a>
-
-        <div class="logout">
-        <a href="{{url_for('logout')}}"><p>Logout</p></a>
-        </div>
-
-        {% else %}
 
         <div class="login">
             <a href="{{url_for('login')}}">
@@ -445,15 +477,12 @@
                 <p>Register</p>
             </a>
         </div>
-
-        {% endif %}
-
-    </nav>
-
-    <main class="bg-success overflow-auto">
+ -->
 
 
-        <!-- Flash Message Display -->
+    </header>
+
+    <main>
 
 
         {% for category,messages in get_flashed_messages(with_categories=True) %}
@@ -475,14 +504,14 @@
         {% block main_block %}
 
 
-
-
         {% endblock %}
 
 
 
 
+
     </main>
+
 
     <footer>
         <div class="top-bar">

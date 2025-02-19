@@ -5,38 +5,41 @@
 }
 
 
-.navbar {
+.navbar6 {
     height: 100px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     background-color: #B55BA4;
-    position: fixed; 
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 10000; 
+    z-index: 10000;
     padding: 0 20px;
 }
 
-.logo img {
-    margin-right:20px;
+.logo6 img {
+    margin-right: 0px;
     height: 80px;
-    margin-left: -100px;
     width: 80px;
     border-radius: 50%;
 }
 
-.box a{
+.box6 a {
     color: #6a0dad;
 }
 
-.box a:hover{
+.box6 a:hover {
     font-size: larger;
 }
 
-.allAbout, .ContactUs, .AboutUs, .login, .signup {
+.allAbout,
+.ContactUs,
+.AboutUs,
+.login,
+.register {
     border: none;
     outline: none;
     padding: 6px;
@@ -53,16 +56,24 @@
 }
 
 
-.allAbout a, .ContactUs a, .AboutUs a, .login a, .signup a {
+.allAbout a,
+.ContactUs a,
+.AboutUs a,
+.login a,
+.register a {
     color: #911693;
     text-decoration: none;
 }
 
-.allAbout:hover, .ContactUs:hover, .AboutUs:hover, .login:hover, .signup:hover {
+.allAbout:hover,
+.ContactUs:hover,
+.AboutUs:hover,
+.login:hover,
+.register:hover {
     font-size: large;
 }
 
-.logo img {
+.logo6 img {
     height: 80px;
     width: 80px;
     border-radius: 50%;
@@ -73,7 +84,7 @@ body {
     overflow-x: hidden;
 }
 
-.logo img {
+.logo6 img {
     height: 80px;
     width: 80px;
     border-radius: 50%;
@@ -82,10 +93,10 @@ body {
 .dropdown-container {
     position: relative;
     display: flex;
-   /* justify-content: flex-start; */
+    /* justify-content: flex-start; */
 }
 
-.dropdown-container .dropdown-menu{
+.dropdown-container .dropdown-menu {
     position: fixed;
 }
 
@@ -181,6 +192,11 @@ body {
     text-align: center;
     font-size: 14px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.sub-option a{
+    text-decoration: none;
+    color: pink;
 }
 
 .sub-option:last-child {
@@ -620,9 +636,9 @@ body {
 }
 
 
-footer {
-    background-color: #5c0d8a;
-    color: white;
+.footer {
+    background-color: #3E043B;
+    color: rgb(9, 4, 4);
     padding: 20px;
     bottom: 0px;
     font-family: Arial, sans-serif;
@@ -651,6 +667,7 @@ footer {
     padding: 20px;
 }
 
+
 .footer-column {
     flex: 1;
     min-width: 200px;
@@ -661,14 +678,16 @@ footer {
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 10px;
+    color: #E5C0D1;
 }
 
 .footer-column a {
     display: block;
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: 14px;
     margin-bottom: 5px;
+    
 }
 
 .footer-column a:hover {
@@ -703,9 +722,10 @@ footer {
     text-align: center;
     margin-top: 20px;
     font-size: 12px;
-    
+
 }
-.bottom-bar p{
+
+.bottom-bar p {
     font-weight: bold;
 }
 
@@ -713,13 +733,22 @@ footer {
     display: flex;
     justify-content: flex-end;
     margin-top: 10px;
-    
+
 }
-.social-icons a{
+
+p{
+    color: white;
+}
+
+.social-icons a {
     color: white;
     margin: 10px;
 }
 
-.social-icons a:hover{
+.social-icons a:hover {
     font-size: larger;
+}
+
+.newsletter-box p{
+    color: #3E043B;
 }

@@ -76,12 +76,12 @@ with app.app_context():
         print("Admin user created with email: admin@gmail.com and password: admin123")
 
 
-@app.route("/")
+@app.route("/home")
 @login_required
 def home():
     return  render_template("index.html")
 
-@app.route("/dashboard")
+@app.route("/")
 def dashboard():
     return render_template("dashboard.html")
 
@@ -107,7 +107,7 @@ def login():
         if user and user.check_password(password):
             login_user(user)
             flash("Login successful!", "success")
-            return redirect(url_for("dashboard"))
+            return redirect(url_for("home"))
         else:
             flash("Invalid credentials!", "danger")
 

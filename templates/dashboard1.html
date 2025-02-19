@@ -3,12 +3,6 @@
 
 {% block title_block %}Dashboard{% endblock %}
 
-{% block head %}
-<style>
-    .text-center{
-        margin-top: 250px;
-    }
-</style>
 
 {% block main_block %}
 <div class="text-center">
@@ -17,6 +11,5 @@
     <hr>
     <a href="{{ url_for('profile') }}" class="btn btn-primary">View Profile</a>
     <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
-    <a href="{{url_for('home')}}" class="btn btn-primary"></a>
 </div>
 {% endblock %}
