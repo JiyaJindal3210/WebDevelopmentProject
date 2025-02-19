@@ -1,4 +1,4 @@
-{% extends 'opening.html' %}
+{% extends "base.html" %}
 
 
 {% block title_block %}Dashboard{% endblock %}
@@ -11,5 +11,6 @@
     <hr>
     <a href="{{ url_for('profile') }}" class="btn btn-primary">View Profile</a>
     <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
+    <a href="{{url_for('home')}}" class="btn btn-primary"></a>
 </div>
 {% endblock %}

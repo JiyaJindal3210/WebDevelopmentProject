@@ -12,24 +12,26 @@
     }
 
     body {
-        background: linear-gradient(135deg, #2b063c, #9c52b7);
+        /* background: linear-gradient(135deg, #2b063c, #9c52b7); */
 
         font-family: 'Arial', sans-serif;
         height: 100vh;
-        display: flex;
+        /* display: flex; */
         justify-content: center;
         align-items: center;
-        background-color: #e9ecef;
+        background-color: #3d1646;
     }
 
     .login-container {
         display: flex;
+        margin-top: 200px;
         width: 100%;
         max-width: 1000px;
         height: 80%;
         border-radius: 10px;
         overflow: hidden;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        margin-left: 200px;
     }
 
 
@@ -61,7 +63,7 @@
     .right-side {
         flex: 1;
         background-color: white;
-        padding: 40px;
+        padding: 30px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -212,7 +214,7 @@
             <a href="#" class="forgot-password">Forgot Password?</a>
         </form>
 
-        <p>New User? <a href="{{ url_for('signup') }}">Register first</a></p>
+        <p style="color: black;">New User? <a href="{{ url_for('signup') }}">Register first</a></p>
 
     </div>
 </div>

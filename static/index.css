@@ -249,13 +249,22 @@ body {
     justify-content: space-around;
 }
 
-.m3,.m6 {
+.m3 {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 40px;
     font-weight: bolder;
-    color: #6a0dad;
+    color:purple;
+}
+
+.m6{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bolder;
+    color: #540c9c;
 }
 
 .m3:hover,.m6:hover{
