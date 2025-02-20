@@ -485,6 +485,7 @@ body {
     gap: 30px;
     padding: 20px;
     justify-content: center;
+    color: purple;
 }
 
 .grid-container i{

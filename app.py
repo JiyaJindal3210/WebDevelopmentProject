@@ -168,7 +168,6 @@ def admin_required(func):
 
 @app.route('/admin')
 @login_required
-@admin_required
 def admin():
     return render_template("admin.html")
 

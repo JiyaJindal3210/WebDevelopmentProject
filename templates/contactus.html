@@ -236,20 +236,20 @@
                         <h5 class="modal-title text-center" id="contactFormModalLabel">Contact Us</h5>
                     </div>
                     <div class="modal-body">
-                        <form id="contactForm" method="POST">
+                        <form action="{{url_for('admin')}}" id="contactForm" method="POST">
                             <div class="mb-3">
                                 <label for="name" class="form-label">Your Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="Enter your name"
+                                <input type="text" class="form-control" name="name" id="name" placeholder="Enter your name"
                                     required>
                             </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email Address</label>
-                                <input type="email" class="form-control" id="email" placeholder="Enter your email"
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email"
                                     required>
                             </div>
                             <div class="mb-3">
                                 <label for="message" class="form-label">Message</label>
-                                <textarea class="form-control" id="message" rows="4"
+                                <textarea class="form-control" name="message" id="message" rows="4"
                                     placeholder="Type your message here" required></textarea>
                             </div>
                             <div class="d-flex justify-content-center">
