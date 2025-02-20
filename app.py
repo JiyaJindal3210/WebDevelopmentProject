@@ -254,9 +254,26 @@ class Cart(db.Model):  # Move Cart model above db.create_all()
 def seed_data():
     if not Pet.query.first():
         pets = [
-            Pet(name="Noodle", age="Adult", breed="Affenpinscher", distance="1 mile", image_url="https://example.com/noodle.jpg"),
-            Pet(name="Qiqi", age="Puppy", breed="Husky", distance="1 mile", image_url="https://example.com/qiqi.jpg"),
-            Pet(name="Buddy", age="Young", breed="Labrador", distance="2 miles", image_url="https://example.com/buddy.jpg"),
+            Pet(name="Noodle", age="Adult", breed="Affenpinscher", distance="1 mile", image_url="https://th.bing.com/th/id/OIP.cI7fAzURVVesyQ0YOtBI9QHaFA?w=276&h=187&c=7&r=0&o=5&dpr=1.3&pid=1.7"),
+            Pet(name="Qiqi", age="Puppy", breed="Husky", distance="1 mile", image_url="https://th.bing.com/th/id/OIP.nyjmhqzstu3Cf7UAyxK6ggHaH2?w=129&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"),
+            Pet(name="Sir Woofington", age="Young", breed="Bull dog", distance="2 miles", image_url="https://th.bing.com/th/id/OIP.fXQ2hw2A69OGE8JDfDmG8AHaFj?w=235&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"),
+            Pet(name="Ohana", age="Young", breed="Indian dog", distance="2 miles", image_url="https://th.bing.com/th/id/OIP.aqF33gxnIodSAMxUhOeGOQHaE8?w=254&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"),
+            Pet(name="Buddy", age="Young", breed="Labrador", distance="2 miles", image_url="https://th.bing.com/th/id/OIP.kAMCjX7G_1inCivhWgX_7QHaHN?w=172&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"),
+            Pet(name="Max", age="Young", breed="Retriver", distance="2 miles", image_url="https://th.bing.com/th/id/OIP.odw6h0xgBD6VhH2xaA-wPwHaE7?w=246&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"),
+            Pet(name="Charlie", age="Young", breed="Beagle", distance="2 miles", image_url="https://th.bing.com/th/id/OIP.ZG6V_wDPSCdE8SzziuivXQAAAA?w=163&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"),
+            Pet(name="Cookie", age="Young", breed="Australian Shepherd", distance="2 miles", image_url="https://i.pinimg.com/236x/d6/62/50/d6625029be6cf002be22adbfb81cc4e7.jpg"),
+        
+            Pet(name="Whisker", age="Adult", breed="Siamese", distance="1 mile", image_url="https://th.bing.com/th?id=OSK.HEROy9VR7KPTnKBcoHbUl7P3gEqvU6I0YV8YFu6wz7A5FX4&w=312&h=200&c=15&rs=2&o=6&oif=webp&dpr=1.3&pid=SANGAM"),
+            Pet(name="Mittens", age="Young", breed="Bombay", distance="1 mile", image_url="https://th.bing.com/th/id/OIP.rRWT4tE7on19tSOUg8LsswHaHa?w=213&h=213&c=7&r=0&o=5&dpr=1.3&pid=1.7"),
+            Pet(name="Luna", age="Young", breed="Persian", distance="2 miles", image_url="https://th.bing.com/th/id/OIP.t38bX_RGi215THgQf3tGqgHaK_?w=115&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"),
+            Pet(name="Ohana", age="Young", breed="Indian dog", distance="2 miles", image_url="https://th.bing.com/th/id/OIP.O0V6YCo2dW7BnESnVXP6pwHaF7?w=228&h=182&c=7&r=0&o=5&dpr=1.3&pid=1.7"),
+            Pet(name="Cleo", age="Kitten", breed="Ragdoll", distance="2 miles", image_url="https://th.bing.com/th/id/OIP.tw8IfOZpvk5v0-075KquHQHaE8?w=271&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"),
+            Pet(name="Simba", age="Young", breed="Bengal", distance="2 miles", image_url="https://th.bing.com/th/id/OIP.oCnvzTNt7bAiflwPzySiigHaE7?w=234&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"),
+            Pet(name="Oliver", age="Adult", breed="British Shorthair", distance="2 miles", image_url="https://th.bing.com/th/id/OIP.EKJoA_dKQMr4dCWDpDRUlAHaFV?w=241&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"),
+            Pet(name="Bella", age="Young", breed="Scottish ", distance="2 miles", image_url="https://th.bing.com/th/id/OIP.l0WnU8nPTvZeIuGAAJ0aYwHaE7?w=256&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"),
+        
+
+
         ]
         db.session.add_all(pets)
         db.session.commit()
