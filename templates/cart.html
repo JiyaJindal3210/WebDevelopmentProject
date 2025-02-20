@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title_block %}Your Cart{% endblock %}
+
+
+{% block head %}
+<style>
+    body{
+        background-color: purple;
+    }
+    .pet-grid{
+        margin-top: 230px;
+    }
+    h2{
+        margin-top: 220px;
+    }
+</style>
+{% endblock %}
+
+{% block main_block %}
+<h2>Your Cart</h2>
+<hr>
+<div class="pet-grid">
+    {% for item in cart_items %}
+    <div class="pet-card">
+        <img src="{{ item.pet.image_url }}" alt="{{ item.pet.name }}">
+        <div class="pet-info">
+            <p class="pet-name">{{ item.pet.name }}</p>
+            <p class="pet-details">{{ item.pet.details }}</p>
+            <form action="{{ url_for('remove_from_cart', cart_id=item.id) }}" method="post">
+                <button type="submit" class="btn btn-danger">Remove</button>
+            </form>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -44,7 +44,7 @@
         .ContactUs,
         .AboutUs,
         .login,
-        .register,.Dashboard6, .logout6{
+        .register,.Dashboard6, .logout6, .cart6{
             border: none;
             outline: none;
             padding: 6px;
@@ -65,7 +65,7 @@
         .ContactUs a,
         .AboutUs a,
         .login a,
-        .register a, .Dashboard6 a, .logout6 a{
+        .register a, .Dashboard6 a, .logout6 a, .cart6 a{
             color: #911693;
             text-decoration: none;
         }
@@ -74,7 +74,7 @@
         .ContactUs:hover,
         .AboutUs:hover,
         .login:hover,
-        .register:hover, .Dashboard6:hover, .logout6:hover {
+        .register:hover, .Dashboard6:hover, .logout6:hover, .cart6:hover {
             font-size: large;
         }
 
@@ -426,10 +426,13 @@
         {% if current_user.is_authenticated %}
 
     <div class="Dashboard6">
-        <a href="{{url_for('dashboard')}}">Dashboard</a>
+        <a href="{{url_for('profile')}}">Profile</a>
     </div>
     <div class="logout6">
         <a href="{{url_for('logout')}}">Logout</a>
+    </div>
+    <div class="cart6">
+        <a href="{{url_for('cart')}}">Cart</a>
     </div>
 
 

@@ -5,6 +5,7 @@ from flask_login import LoginManager, UserMixin, login_user, logout_user, login_
 from flask_bcrypt import Bcrypt
 from functools import wraps
 
+
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 app=Flask(__name__)
@@ -12,6 +13,7 @@ app=Flask(__name__)
 
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///" + \
     os.path.join(basedir, "app.db")
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///pets.db'
 app.config["SQLALCHEMY_TRACK_MODIFICATION"] = False
 
 
@@ -74,6 +76,8 @@ with app.app_context():
         db.session.add(admin_user)
         db.session.commit()
         print("Admin user created with email: admin@gmail.com and password: admin123")
+
+
 
 
 @app.route("/home")
@@ -155,7 +159,7 @@ def logout():
 @app.route("/profile")
 @login_required
 def profile():
-    return render_template("profile.html")
+    return render_template("profile.html", user = current_user)
 
 def admin_required(func):
     @wraps(func)
@@ -197,9 +201,10 @@ def catKittenAdoption():
 def dogPuppiesAdoption():
     return render_template("dogPuppiesAdoption.html")
 
-@app.route("/dogs")
+@app.route('/dogs')
 def dogs():
-    return render_template("dogs.html")
+    pets = Pet.query.all()  # Fetch all pet records
+    return render_template('dogs.html', pets=pets)
 
 @app.route("/behaviordog")
 def behaviordog():
@@ -232,8 +237,71 @@ def welcome():
     return render_template("welcome.html")
 
 
+class Pet(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(100), nullable=False)
+    age = db.Column(db.String(50), nullable=False)
+    breed = db.Column(db.String(100), nullable=False)
+    distance = db.Column(db.String(50), nullable=False)
+    image_url = db.Column(db.String(300), nullable=False)
 
+class Cart(db.Model):  # Move Cart model above db.create_all()
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    pet_id = db.Column(db.Integer, db.ForeignKey('pet.id'), nullable=False)
+    pet = db.relationship('Pet', backref=db.backref('cart_items', lazy=True))
 
+def seed_data():
+    if not Pet.query.first():
+        pets = [
+            Pet(name="Noodle", age="Adult", breed="Affenpinscher", distance="1 mile", image_url="https://example.com/noodle.jpg"),
+            Pet(name="Qiqi", age="Puppy", breed="Husky", distance="1 mile", image_url="https://example.com/qiqi.jpg"),
+            Pet(name="Buddy", age="Young", breed="Labrador", distance="2 miles", image_url="https://example.com/buddy.jpg"),
+        ]
+        db.session.add_all(pets)
+        db.session.commit()
+
+with app.app_context():
+    db.create_all()  # Now, both Pet and Cart exist when this runs
+    seed_data()
+
+@app.route('/add_to_cart/<int:pet_id>', methods=['POST'])
+@login_required
+def add_to_cart(pet_id):
+    pet = Pet.query.get_or_404(pet_id)
+    
+    # Check if pet is already in the cart
+    existing_item = Cart.query.filter_by(user_id=current_user.id, pet_id=pet_id).first()
+    if existing_item:
+        flash('This pet is already in your cart!', 'warning')
+        return redirect(url_for('dogs'))
+
+    new_cart_item = Cart(user_id=current_user.id, pet_id=pet.id)
+    db.session.add(new_cart_item)
+    db.session.commit()
+    
+    flash(f'{pet.name} added to your cart!', 'success')
+    return redirect(url_for('dogs'))
+
+@app.route('/cart')
+@login_required
+def cart():
+    cart_items = Cart.query.filter_by(user_id=current_user.id).all()
+    return render_template('cart.html', cart_items=cart_items)
+
+@app.route('/remove_from_cart/<int:cart_id>', methods=['POST'])
+@login_required
+def remove_from_cart(cart_id):
+    item = Cart.query.get_or_404(cart_id)
+    
+    if item.user_id != current_user.id:
+        flash("You can't remove this item!", 'danger')
+        return redirect(url_for('cart'))
+
+    db.session.delete(item)
+    db.session.commit()
+    flash('Item removed from cart.', 'success')
+    return redirect(url_for('cart'))
 
 if __name__ == '__main__':
     app.run(debug=True)

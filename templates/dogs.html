@@ -91,13 +91,18 @@
     <div class="container">
         <br>
         <div class="pet-grid">
-            <div class="pet-card">
-                <img src="https://th.bing.com/th/id/OIP.cI7fAzURVVesyQ0YOtBI9QHaFA?w=276&h=187&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Pet">
-                <div class="pet-info">
-                    <p class="pet-name">Noodle</p>
-                    <p class="pet-details">Adult • Affenpinscher • 1 mile away</p>
-                </div>
+            {% for pet in pets %}
+        <div class="pet-card">
+            <img src="{{ pet.image_url }}" alt="{{ pet.name }}">
+            <div class="pet-info">
+                <p class="pet-name">{{ pet.name }}</p>
+                <p class="pet-details">{{ pet.details }}</p>
+                <form action="{{ url_for('add_to_cart', pet_id=pet.id) }}" method="post">
+                    <button type="submit" class="btn btn-primary">Add to Cart</button>
+                </form>
             </div>
+        </div>
+        {% endfor %}
             <div class="pet-card">
                 <img src="https://th.bing.com/th/id/OIP.nyjmhqzstu3Cf7UAyxK6ggHaH2?w=129&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Pet">
                 <div class="pet-info">
